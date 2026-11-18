@@ -1,0 +1,554 @@
+/* RepairPass Unified Design Stylesheet (Preserved & Enhanced from Prototype) */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+a {
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: white;
+  border-bottom: 1px solid #dbe2ea;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: #1e3a8a;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #475569;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.button, button, .outline-button, .buttonout {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s;
+  border: none;
+}
+
+.button, button {
+  border: 1px solid #1e3a8a;
+  background: #1e3a8a;
+  color: white;
+}
+
+.buttonout {
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #b91c1c;
+}
+
+.outline-button {
+  border: 1px solid #1e3a8a;
+  background: white;
+  color: #1e3a8a;
+}
+
+.button:hover, button:hover, .outline-button:hover, .buttonout:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+button:disabled, .button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Main sections */
+.hero {
+  padding: 60px 0;
+  background: white;
+}
+
+.hero h1 span {
+  color: #1e3a8a;
+}
+
+.large-text {
+  max-width: 650px;
+  color: #64748b;
+  font-size: 17px;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.white-section {
+  background: white;
+}
+
+.small-heading {
+  margin-bottom: 8px;
+  color: #1e3a8a;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.two-columns, .three-columns, .four-columns {
+  display: grid;
+  gap: 22px;
+}
+
+.two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.four-columns {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 850px) {
+  .three-columns, .four-columns, .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card, .passport, .form-box {
+  padding: 24px;
+  background: white;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+}
+
+.feature-list {
+  margin-top: 30px;
+}
+
+.card p, .passport p {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.passport-title {
+  margin: -24px -24px 20px;
+  padding: 20px 24px;
+  background: #1e3a8a;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.passport-title p {
+  margin-bottom: 5px;
+  color: white;
+}
+
+.passport-title h2 {
+  color: white;
+  margin-bottom: 4px;
+}
+
+.simple-list {
+  padding-left: 22px;
+}
+
+.simple-list li {
+  margin-bottom: 12px;
+}
+
+/* Forms */
+.form-page {
+  min-height: 550px;
+  padding: 50px 20px;
+}
+
+.form-box {
+  max-width: 480px;
+  margin: auto;
+}
+
+.center-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #1e3a8a;
+  border-color: #1e3a8a;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.checkbox-label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.checkbox-label input {
+  width: auto;
+  margin-right: 8px;
+}
+
+/* Dashboard */
+.dashboard-header {
+  background: #1e3a8a;
+  color: white;
+}
+
+.dashboard-header .logo, .dashboard-header nav a {
+  color: white;
+}
+
+.welcome {
+  padding: 35px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary .card strong {
+  display: block;
+  color: #1e3a8a;
+  font-size: 32px;
+  margin: 6px 0;
+}
+
+.appliance-list {
+  margin-top: 24px;
+}
+
+/* Status Badges */
+.green-status, .red-status, .yellow-status, .blue-status {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.green-status {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.red-status {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.yellow-status {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.blue-status {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.repair-box {
+  margin-top: 20px;
+}
+
+/* Repair 4-step Visual Timeline */
+.repair-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+.repair-steps div {
+  padding: 12px 6px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+.repair-steps .complete-step {
+  background: #dcfce7;
+  border-color: #15803d;
+  color: #15803d;
+  font-weight: bold;
+}
+
+.repair-steps .current-step {
+  background: #fff7ed;
+  border-color: #c2410c;
+  color: #c2410c;
+  font-weight: bold;
+}
+
+/* Detailed Audit Trail Timeline */
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 18px;
+  border-left: 2px solid #cbd5e1;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #1e3a8a;
+}
+
+.timeline-item.active-step::before {
+  background: #c2410c;
+  box-shadow: 0 0 0 3px #fed7aa;
+}
+
+.timeline-item .time {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Tables */
+.table-box {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 14px;
+  border: 1px solid #dbe2ea;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #eaf0ff;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+/* Alerts & Notices */
+.alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.alert-error {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+}
+
+.alert-success {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+
+.alert-info {
+  background: #e0f2fe;
+  border: 1px solid #7dd3fc;
+  color: #0369a1;
+}
+
+.empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  color: #64748b;
+  margin: 20px 0;
+}
+
+.empty-state h3 {
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+/* Category Grid on Landing */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.category-card {
+  padding: 16px;
+  background: white;
+  border: 1px solid #dbe2ea;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  color: #1e3a8a;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+/* OTP Display Card */
+.otp-display-box {
+  background: #eff6ff;
+  border: 2px dashed #3b82f6;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin: 18px 0;
+}
+
+.otp-number {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  color: #1e3a8a;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  padding: 25px 0;
+  background: white;
+  border-top: 1px solid #dbe2ea;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.footer-content p {
+  margin: 0;
+}
